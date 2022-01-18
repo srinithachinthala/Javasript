@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function pattern1()
+		{
+		var value1=Number(document.getElementById("v1").value)
+		for (i=0;i<=value1;i++)
+		{
+		for (j=0;j<=(value1-i);j++)
+		{ 
+			var sp=" "
+			document.write(sp)
+		}
+		for (k=0;k<=i;k++)
+		{
+			document.write("* ")
+		}
+		document.write("<br>")
+		}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="v1" placeholder="please enter your value">
+	<input type="submit" value="submit" onclick="pattern1()">
+</body>
+</html>

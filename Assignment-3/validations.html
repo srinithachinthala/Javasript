@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function validating()
+		{
+			var name=document.myform.nme.value;  
+			var id=document.myform.idi.value;  
+			var email=document.myform.eml.value;  
+			var password=document.myform.pwrd.value;  
+			var cpassword=document.myform.cpwrd.value;
+			var nm=name.slice(0,1)
+			if (name==""|id==""|email==""|password==""|cpassword=="")
+			{
+				alert("each field is required")
+			}
+			if (nm!=nm.toUpperCase())
+			{
+				document.getElementById("spn").innerHTML="**Name should starts with capital letter"
+				return false
+			}
+			if (password.length<8)
+			{
+				document.getElementById("spn1").innerHTML="**password should be greater than or equal to 8 charracters"
+				return false
+			}
+			if (password!=cpassword)
+			{
+			document.getElementById("spn2").innerHTML="**password does not match"
+				return false
+			}
+		}
+	</script>
+</head>
+<body>
+<h1>please fill this form </h1>
+<form method="post" name="myform" onsubmit="return validating()">
+<label>Name</label>
+<input type="text" name="nme">
+<span id="spn" style="color: red;"></span><br><br>
+<label>Id</label>
+<input type="text" name="idi"><br><br>
+<label>Email</label>
+<input type="email" name="eml"><br><br>
+<label>password</label>
+<input type="password" name="pwrd">
+<span id="spn1" style="color: red;"></span><br><br>
+<label>confirm password</label>
+<input type="password" name="cpwrd">
+<span id="spn2" style="color: red;"><br><br>
+<input type="submit" value="submit" >
+</form>
+</body>
+</html>

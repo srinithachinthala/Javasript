@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function pattern1()
+		{
+		var value1=Number(document.getElementById("v1").value)
+		for (i=0;i<value1;i++)
+		{
+		var res=Math.pow(11,i)
+		document.write(res,"<br>")
+		}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="v1" placeholder="please enter your value">
+	<input type="submit" value="submit" onclick="pattern1()">
+</body>
+</html>
